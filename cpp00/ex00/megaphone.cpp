@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 #include <cctype>
 
 typedef int (*f_util)(int);
@@ -12,8 +12,9 @@ typedef int (*f_util)(int);
 /// @return transformed string of @c char
 std::string	ft_transform(char *str, f_util f)
 {
-	std::string	res(str);
-	for (size_t i = 0; i < res.size() && i < std::strlen(str); i++)
+	std::string	res (str);
+
+	for (size_t i = 0; i < res.size(); i++)
 		res[i] = f(str[i]);
 	return (res);
 }
@@ -28,7 +29,7 @@ int main(int ac, char *av[])
 		{
 			std::cout << ft_transform(av[i], toupper);
 			if (i < ac - 1)
-				std::cout << ' ';
+				std::cout << "";
 		}
 	}
 	std::cout << std::endl;
