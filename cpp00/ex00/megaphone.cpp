@@ -12,7 +12,8 @@ typedef int (*f_util)(int);
 /// @return transformed string of @c char
 std::string	ft_transform(char *str, f_util f)
 {
-	std::string	res(str);
+	std::string	res (str);
+
 	for (size_t i = 0; i < res.size() && i < std::strlen(str); i++)
 		res[i] = f(str[i]);
 	return (res);
