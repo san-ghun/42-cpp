@@ -14,7 +14,7 @@ int	main(void)
 	PhoneBook   pb;
 	std::string cmd;
 
-	while(showPrompt(), getline(std::cin, cmd))
+	while(showPrompt(), std::cout << "> ", getline(std::cin, cmd))
 	{
 		if (cmd == "ADD")
 			pb.addContact();

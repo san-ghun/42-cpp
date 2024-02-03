@@ -29,6 +29,7 @@ private:
 	std::string	_darkest_secret;
 
 	std::string	_abbreviated(const std::string &field) const;
+
 public:
 	Contact();
 	~Contact();
