@@ -1,5 +1,11 @@
 #include "../include/PhoneBook.hpp"
+#include <cctype>
 // #include "PhoneBook.hpp"
+
+bool  isNumber(char c)
+{
+  return (isdigit(c) != 0);
+}
 
 bool	isPhoneNumber(char c)
 {

@@ -1,4 +1,9 @@
 #include "../include/PhoneBook.hpp"
+#include <iostream>
+#include <iterator>
+#include <ostream>
+#include <sstream>
+#include <string>
 // #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : _count(0), _index(0) {}
@@ -56,8 +61,52 @@ void	PhoneBook::addContact(void)
 		std::cerr << "[Fail] failed to create new contact. Try again." << std::endl;
 }
 
+bool  PhoneBook::_isValidIndex(std::string &input, int &index)
+{
+  std::istringstream  iss(input);
+
+  if (!(iss >> index))
+  {
+    std::cerr << "error: the index is too large. Please try again." << std::endl;
+    return (false);
+  }
+  if (index >= 1 && index <= _count)
+    return (true);
+  else
+  {
+    std::cerr << "error: the index does not exist. Please try again." << std::endl;
+    return (false);
+  }
+}
+
+int PhoneBook::_getTargetIndex(void)
+{
+	std::string	input;
+  int         index;
+
+	while (true)
+	{
+		std::cout << "> Enter the index of the contact to view detail: ";
+		getline(std::cin, input);
+		if (input.empty())
+		{
+			std::cerr << "error: the index cannot be empty. Please try again." << std::endl;
+			continue ;
+		}
+		if (validateString(input, isNumber))
+		{
+      if (_isValidIndex(input, index))
+        return (index);
+      continue ;
+    }
+		std::cerr << "error: invalid index, number only. Please try again." << std::endl;
+	}
+}
+
 void	PhoneBook::searchContact(void)
 {
+  int index;
+
 	while (true)
 	{
 		if (_count == 0)
@@ -73,7 +122,10 @@ void	PhoneBook::searchContact(void)
 			_contacts[n].displayOverview();
 		std::cout << "--------------------------------------" << std::endl;
 
-		//TODO:
-		_contacts[0].displayOne();
+		index = _getTargetIndex() - 1;
+    if (index < 0)
+      continue ;
+    _contacts[index].displayOne();
+    break;
 	}
 }
