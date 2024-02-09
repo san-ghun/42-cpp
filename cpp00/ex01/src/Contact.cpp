@@ -56,10 +56,10 @@ void	Contact::displayOverview(void)
 
 void	Contact::displayOne(void)
 {
-	std::cout << std::endl << "Index [ " << _index + 1 << " ]" << std::endl;
-	std::cout << "First name: " << _first_name << std::endl;
-	std::cout << "Last name: " << _last_name << std::endl;
-	std::cout << "Nickname: " << _nickname << std::endl;
-	std::cout << "Phone number: " << _phone_number << std::endl;
-	std::cout << "Darkest secret: " << _darkest_secret << std::endl << std::endl;
+	std::cout << std::endl << "Index:\t\t[ " << _index + 1 << " ]" << std::endl;
+	std::cout << "First name:\t" << _first_name << std::endl;
+	std::cout << "Last name:\t" << _last_name << std::endl;
+	std::cout << "Nickname:\t" << _nickname << std::endl;
+	std::cout << "Phone number:\t" << _phone_number << std::endl;
+	std::cout << "Darkest secret:\t" << _darkest_secret << std::endl << std::endl;
 }
