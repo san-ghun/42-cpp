@@ -9,16 +9,16 @@ RM			= rm -f
 
 UNAME   	:= $(shell uname)
 
-SRC_DIR		= ./src
+SRC_DIR		= .
 
-NAME 		= $(name)
-SRC_NAME 	= $(shell find ./src -iname "*.cpp")
+NAME 		= task00-02
+SRC_NAME 	= $(shell find . -iname "*.cpp")
 
 OBJ_NAME 	= $(SRC_NAME:.cpp=.o)
 
 HEADERS		= -I $(INC_DIR)
 
-INC_DIR		= ./include
+INC_DIR		= .
 # LIB_DIR		= ./lib
 
 
