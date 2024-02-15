@@ -11,8 +11,8 @@ static void	showPrompt(void)
 
 int	main(void)
 {
-	PhoneBook   pb;
-	std::string cmd;
+	PhoneBook	pb;
+	std::string	cmd;
 
 	while(showPrompt(), std::cout << "> ", getline(std::cin, cmd))
 	{

@@ -1,10 +1,10 @@
 #include "../include/PhoneBook.hpp"
+// #include "PhoneBook.hpp"
 #include <iostream>
 #include <iterator>
 #include <ostream>
 #include <sstream>
 #include <string>
-// #include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook() : _count(0), _index(0) {}
 PhoneBook::~PhoneBook() {}
@@ -82,7 +82,7 @@ bool  PhoneBook::_isValidIndex(std::string &input, int &index)
 int PhoneBook::_getTargetIndex(void)
 {
 	std::string	input;
-  int         index;
+	int			index;
 
 	while (true)
 	{
@@ -95,17 +95,17 @@ int PhoneBook::_getTargetIndex(void)
 		}
 		if (validateString(input, isNumber))
 		{
-      if (_isValidIndex(input, index))
-        return (index);
-      continue ;
-    }
+			if (_isValidIndex(input, index))
+				return (index);
+			continue ;
+		}
 		std::cerr << "error: invalid index, number only. Please try again." << std::endl;
 	}
 }
 
 void	PhoneBook::searchContact(void)
 {
-  int index;
+	int	index;
 
 	while (true)
 	{
@@ -121,11 +121,10 @@ void	PhoneBook::searchContact(void)
 		for (int n = 0; n < _count; n++)
 			_contacts[n].displayOverview();
 		std::cout << "--------------------------------------" << std::endl;
-
 		index = _getTargetIndex() - 1;
-    if (index < 0)
-      continue ;
-    _contacts[index].displayOne();
-    break;
+		if (index < 0)
+		continue ;
+		_contacts[index].displayOne();
+		break;
 	}
 }

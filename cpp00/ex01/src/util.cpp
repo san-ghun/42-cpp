@@ -1,6 +1,6 @@
 #include "../include/PhoneBook.hpp"
-#include <cctype>
 // #include "PhoneBook.hpp"
+#include <cctype>
 
 bool  isNumber(char c)
 {
