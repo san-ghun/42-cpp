@@ -11,7 +11,7 @@ UNAME   	:= $(shell uname)
 
 SRC_DIR		= ./src
 
-NAME 		= $(name)
+NAME 		= BraiiiiiiinnnzzzZ
 SRC_NAME 	= $(shell find . -iname "*.cpp")
 
 OBJ_NAME 	= $(SRC_NAME:.cpp=.o)
