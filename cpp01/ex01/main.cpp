@@ -5,7 +5,7 @@ int	main( void )
 	Zombie*	horde;
 	int		n;
 
-	n = 120;
+	n = 12;
 	horde = zombieHorde(n, "Horde");
 	if (horde == NULL)
 		return (EXIT_FAILURE);
