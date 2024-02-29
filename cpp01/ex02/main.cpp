@@ -9,7 +9,7 @@ int	main( void )
 
 	std::cout << "[[ memory address ]]" << "\n";
 	std::cout << "\tof the string variable: " << &str << "\n";
-	std::cout << "\theld by stringPTR: " << stringPTR << "\n";
+	std::cout << "\theld by stringPTR: " << &stringPTR << "\n";
 	std::cout << "\theld by stringREF: " << &stringREF << std::endl;
 	std::cout << std::endl;
 	std::cout << "[[ value ]]" << "\n";
