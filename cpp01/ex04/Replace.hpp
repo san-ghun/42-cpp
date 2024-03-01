@@ -8,19 +8,19 @@
 class Replace
 {
 private:
-    std::string     _filein;
-    std::string     _fileout;
+	std::string		_filein;
+	std::string		_fileout;
 
 public:
-    std::string     str1;
-    std::string     str2;
-    std::ifstream   ifs;
-    std::ofstream   ofs;
+	std::string		str1;
+	std::string		str2;
+	std::ifstream	ifs;
+	std::ofstream	ofs;
 
-    Replace(std::string filename, std::string s1, std::string s2);
-    ~Replace(void);
+	Replace(std::string filename, std::string s1, std::string s2);
+	~Replace(void);
 
-    void    ft_replace(std::string& buf);
+	void	ft_replace(std::string& buf);
 
 };
 
