@@ -1,0 +1,12 @@
+function Cat(name) {
+  this.name = name;
+}
+
+let myCat = new Cat("Buddy");
+
+// Adding a method to the prototype after object creation
+Cat.prototype.bark = function () {
+  console.log(this.name + " says woof!");
+};
+
+myCat.bark(); // Newly added method is available
