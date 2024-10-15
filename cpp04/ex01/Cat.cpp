@@ -26,6 +26,8 @@ Cat& Cat::operator=(const Cat& obj)
     if (this != &obj)
     {
         this->_type = obj._type;
+        // this->_brain = obj._brain;
+        // std::cout << "Cat shallow copied memory address " << &(this->_brain->ideas[0]) << std::endl;
         this->_brain = new Brain(*obj._brain);
         std::cout << "Cat deep copied memory address " << &(this->_brain->ideas[0]) << std::endl;
     }
