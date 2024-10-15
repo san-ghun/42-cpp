@@ -25,7 +25,7 @@ Brain &Brain::operator=(Brain const &obj)
     return *this;
 }
 
-std::string	Brain::getIdeas(int i) const
+std::string	Brain::getIdea(int i) const
 {
     if (i < 0 || i > 99)
     {
@@ -35,7 +35,7 @@ std::string	Brain::getIdeas(int i) const
     return this->ideas[i];
 }
 
-void	Brain::setIdeas(int i, std::string idea)
+void	Brain::setIdea(int i, std::string idea)
 {
     if (i < 0 || i > 99)
     {

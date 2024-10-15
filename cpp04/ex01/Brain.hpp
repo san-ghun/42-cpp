@@ -14,8 +14,8 @@ class Brain
 
         std::string	ideas[100];
 
-        std::string getIdeas(int i) const;
-        void setIdeas(int i, std::string idea);
+        std::string getIdea(int i) const;
+        void setIdea(int i, std::string idea);
 };
 
 #endif

@@ -17,6 +17,9 @@ class Dog : public Animal
         Dog& operator=(const Dog& obj);
 
         void makeSound() const override;
+
+        void setIdea(int index, std::string idea);
+        std::string getIdea(int index) const;
 };
 
 #endif

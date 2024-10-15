@@ -8,8 +8,8 @@
 class Cat : public Animal
 {
     private:
-        Brain* _brain;
     public:
+        Brain* _brain;
         Cat();
         ~Cat();
 
@@ -17,6 +17,9 @@ class Cat : public Animal
         Cat& operator=(const Cat& obj);
 
         void makeSound() const override;
+
+        void setIdea(int index, std::string idea);
+        std::string getIdea(int index) const;
 };
 
 #endif
