@@ -13,7 +13,7 @@ public:
     Dog(const Dog& obj);
     Dog& operator=(const Dog& obj);
 
-    void makeSound() const;
+    void makeSound() const override;
 };
 
 #endif
