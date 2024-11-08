@@ -12,7 +12,14 @@ UNAME   	:= $(shell uname)
 # SRC_DIR		= ./src
 
 NAME 		= AbstractClass
-SRC_NAME 	= $(shell find . -iname "*.cpp")
+# SRC_NAME 	= $(shell find . -iname "*.cpp")
+SRC_NAME 	= AAnimal.cpp \
+				Brain.cpp \
+				Cat.cpp \
+				Dog.cpp \
+				main.cpp \
+				WrongAnimal.cpp \
+				WrongCat.cpp
 
 OBJ_NAME 	= $(SRC_NAME:.cpp=.o)
 
