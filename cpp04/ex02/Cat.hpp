@@ -8,8 +8,8 @@
 class Cat : public AAnimal
 {
     private:
-    public:
         Brain* _brain;
+    public:
         Cat();
         ~Cat();
 

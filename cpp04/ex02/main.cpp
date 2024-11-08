@@ -49,14 +49,14 @@ int main()
     Cat cat;
     std::cout << &cat << std::endl;
     cat.setIdea(0, "Cat idea");
-    std::cout << &(cat._brain->ideas[0]) << std::endl;
+    // std::cout << &(cat._brain->ideas[0]) << std::endl;
     std::cout << cat.getIdea(0) << std::endl;
 
     std::cout << std::endl;
 
     Cat cat2 = cat;
     std::cout << &cat2 << std::endl;
-    std::cout << &(cat2._brain->ideas[0]) << std::endl;
+    // std::cout << &(cat2._brain->ideas[0]) << std::endl;
     std::cout << cat2.getIdea(0) << std::endl;
 
     return 0;
