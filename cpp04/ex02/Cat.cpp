@@ -14,7 +14,7 @@ Cat::~Cat()
     std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat::Cat(const Cat& obj)
+Cat::Cat(const Cat& obj) : AAnimal()
 {
     // this->_brain = new Brain(*obj._brain);
     // std::cout << "Cat deep copied memory address " << &(this->_brain->ideas[0]) << std::endl;

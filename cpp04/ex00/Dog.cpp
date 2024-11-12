@@ -1,6 +1,6 @@
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
     this->_type = "Dog";
     std::cout << "Dog constructor called" << std::endl;
@@ -11,7 +11,7 @@ Dog::~Dog()
     std::cout << "Dog destructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& obj)
+Dog::Dog(const Dog& obj) : Animal()
 {
     *this = obj;
 }
